@@ -1,0 +1,147 @@
+{
+    "organization": {
+        "officialAccounts": [
+            {
+                "id": "oa1",
+                "name": "OA Chính quyền cơ sở",
+                "description": "Quận huyện, Tỉnh, Thành Phố "
+            }
+        ],
+        "id": "org1",
+        "logoUrl": "",
+        "description": "Organization description",
+        "name": "Phục vụ cuộc họp cơ quan"
+    },
+    "profiles": [
+        {
+            "name": "name 1",
+            "dueDate": "2023-07-06T10:00:00Z",
+            "profileCode": "ABC123",
+            "notifications": [
+                {
+                    "message": "Notification 1",
+                    "createdAt": "2023-07-06T09:00:00Z"
+                },
+                {
+                    "message": "Notification 2",
+                    "createdAt": "2023-07-05T14:30:00Z"
+                }
+            ]
+        }
+    ],
+    "schedule-appointment": {},
+    "feedbacks": {
+        "data": [
+            {
+                "id": "1",
+                "title": "Feedback 1",
+                "content": "This is the content of feedback 1.",
+                "response": "This is the response to feedback 1.",
+                "creationTime": "2023-07-06T10:30:00Z",
+                "responseTime": "2023-07-06T11:00:00Z",
+                "type": "Type 1",
+                "imageUrls": [
+                    "https://example.com/image1.jpg",
+                    "https://example.com/image2.jpg"
+                ]
+            },
+            {
+                "id": "2",
+                "title": "Feedback 2",
+                "content": "This is the content of feedback 2.",
+                "response": "This is the response to feedback 2.",
+                "creationTime": "2023-07-05T09:15:00Z",
+                "responseTime": "2023-07-05T10:00:00Z",
+                "type": "Type 2",
+                "imageUrls": []
+            },
+            {
+                "id": "3",
+                "title": "Feedback 3",
+                "content": "This is the content of feedback 3.",
+                "response": "",
+                "creationTime": "2023-07-04T14:20:00Z",
+                "responseTime": "2023-07-04T14:20:00Z",
+                "type": "Type 1",
+                "imageUrls": ["https://example.com/image3.jpg"]
+            }
+        ],
+        "current": 1,
+        "total": 3,
+        "pageSize": 10
+    },
+    "feedbackTypes": [
+        {
+            "id": 1,
+            "title": "type 1"
+        },
+        {
+            "id": 2,
+            "title": "type 2"
+        }
+    ],
+    "articles": [
+        {
+            "author": "Author 1",
+            "title": "Article 1",
+            "desc": "Description of Article 1",
+            "link": "https://mini.zalo.me/",
+            "createdAt": "2023-07-06T00:00:00Z",
+            "thumb": "/assets/thumb.png",
+            "id": "article1"
+        },
+        {
+            "author": "Author 2",
+            "title": "Article 2 ",
+            "desc": "Description of Article 2",
+            "link": "https://mini.zalo.me/",
+            "createdAt": "2023-07-05T00:00:00Z",
+            "thumb": "/assets/thumb.png",
+            "id": "article2"
+        }
+    ],
+    "guidelines": {
+        "data": [
+            {
+                "id": "1",
+                "question": "question 1?",
+                "answer": "answer 1"
+            },
+            {
+                "id": "2",
+                "question": "question 2?",
+                "answer": "answer 2"
+            },
+            {
+                "id": "3",
+                "question": "question 3?",
+                "answer": "answer 3"
+            }
+        ],
+        "page": 1,
+        "total": 3,
+        "currentPageSize": 10
+    },
+    "meetings": {
+        "data": [
+            {
+                "id": "1",
+                "name": "meetings 1",
+                "time": "10h"
+            },
+            {
+                "id": "2",
+                "name": "meetings 2",
+                "time": "12h"
+            },
+            {
+                "id": "3",
+                "name": "meetings 3",
+                "time": "13h"
+            }
+        ],
+        "page": 1,
+        "total": 3,
+        "currentPageSize": 10
+    }
+}

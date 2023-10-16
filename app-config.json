@@ -1,0 +1,21 @@
+{
+  "app": {
+    "title": "Meeting App",
+    "headerColor": "",
+    "textColor": "white",
+    "statusBarColor": "#046DD6",
+    "leftButton": "back",
+    "hideIOSSafeAreaBottom": true,
+    "statusBar": "transparent",
+    "textAlign": "left",
+    "actionBarHidden": false,
+    "hideAndroidBottomNavigationBar": false,
+    "selfControlLoading": false
+  },
+  "debug": false,
+  "listCSS": [],
+  "listSyncJS": [],
+  "listAsyncJS": [],
+  "pages": [],
+  "template": {}
+}
