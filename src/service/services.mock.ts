@@ -8,6 +8,8 @@ import {
     FeedbackType,
     InformationGuide,
     InformationGuides,
+    Meeting,
+    Meetings,
     Organization,
     Profile,
     ScheduleAppointment,
@@ -166,6 +168,29 @@ export const getInformationGuides = async (
     Promise.resolve({
         ...db.guidelines,
         informationGuides: db.guidelines.data.map(item => ({
+            ...item,
+            id: Number(item.id),
+        })),
+    });
+ 
+export interface GetMeetingsParams {
+    organizationId: string;
+    page?: number;
+    limit?: number;
+}
+export interface GetMeetingsResponse {
+    current: number;
+    data: Meeting[];
+    pageSize: number;
+    total: number;
+}
+
+export const getMeetings = async (
+    params: GetMeetingsParams,
+): Promise<Meetings> =>
+    Promise.resolve({
+        ...db.meetings,
+        meetings: db.meetings.data.map(item => ({
             ...item,
             id: Number(item.id),
         })),

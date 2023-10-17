@@ -6,6 +6,9 @@ import createFeedbackSlide, { FeedbackSlice } from "./feedbackSlice";
 import createInformationGuideSlide, {
     InformationGuideSlice,
 } from "./informationGuideSlice";
+import createMeetingSlide, {
+    MeetingSlice,
+} from "./meetingSlice";
 import createOrganizationSlide, {
     OrganizationSlice,
 } from "./organizationSlice";
@@ -16,6 +19,7 @@ type State = AppSlice &
     AuthSlice &
     FeedbackSlice &
     InformationGuideSlice &
+    MeetingSlice &
     OrganizationSlice &
     ScheduleSlice &
     ProfileSlice;
@@ -26,6 +30,7 @@ export const useStore = create<State>()(
         ...createAuthStore(...a),
         ...createFeedbackSlide(...a),
         ...createInformationGuideSlide(...a),
+        ...createMeetingSlide(...a),
         ...createOrganizationSlide(...a),
         ...createScheduleSlide(...a),
         ...createProfileSlice(...a),

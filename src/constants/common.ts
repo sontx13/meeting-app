@@ -8,6 +8,7 @@ export const API = {
     FEEDBACK: "/feedback_api",
     FEEDBACK_TYPES: "/feedback_types_api",
     INFORMATION_GUIDE: "/information_guide_api",
+    MEETING: "/meeting_api",
     UPLOAD_IMAGE: "/upload_image_api",
     CREATE_SCHEDULE: "/create_schedule_api",
     GET_SCHEDULE: "/get_schedule_api",
@@ -17,6 +18,7 @@ export const SEARCH_NOT_FOUND = "Không tìm thấy thông tin";
 export const TOTAL_ARTICLES_PER_PAGE = 10;
 export const TOTAL_FEEDBACKS_PER_PAGE = 10;
 export const TOTAL_INFORMATION_GUIDE_PER_PAGE = 10;
+export const TOTAL_MEETING_PER_PAGE = 10;
 
 export const SCHEDULE_APPOINTMENT_STATUS = {
     PENDING: "pending",

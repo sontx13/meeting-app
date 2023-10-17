@@ -11,10 +11,10 @@ import Renew from "@assets/files.png";
 
 export const APP_UTINITIES: Array<Utinity> = [
     {
-        key: "meetings",
+        key: "meeting",
         label: "Điểm danh",
         icon: Icon.SuccessIcon,
-        path: "/meetings",
+        path: "/meeting",
     },
     {
         key: "create-schedule-appointment",

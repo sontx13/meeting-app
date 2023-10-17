@@ -5,7 +5,7 @@ import { Meeting } from "@dts";
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import MeetingItem from "./meetingItem";
+import MeetingItem from "./MeetingItem";
 
 export interface MeetingListProps {
     data: Meeting[];
@@ -31,13 +31,13 @@ const MeetingList = React.forwardRef<
             {data.map(item => (
                 <MeetingItem
                     data={item}
-                    key={`infor-guide-${item.id}`}
+                    key={`meeting-${item.id}`}
                 />
             ))}
             {loading ? (
                 [...Array(5)].map((item, index) => (
                     <MeetingItemSkeleton
-                        key={`information-guide-skeleton-${index}`}
+                        key={`meeting-skeleton-${index}`}
                     />
                 ))
             ) : data.length === 0 ? (

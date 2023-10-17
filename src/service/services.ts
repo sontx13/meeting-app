@@ -6,6 +6,8 @@ import {
     FeedbackType,
     InformationGuide,
     InformationGuides,
+    Meeting,
+    Meetings,
     Organization,
     Profile,
     ScheduleAppointment,
@@ -16,10 +18,12 @@ import {
     TOTAL_ARTICLES_PER_PAGE,
     TOTAL_FEEDBACKS_PER_PAGE,
     TOTAL_INFORMATION_GUIDE_PER_PAGE,
+    TOTAL_MEETING_PER_PAGE,
 } from "@constants/common";
 import { generatePath } from "@utils/string";
 import { formatDate } from "@utils/date-time";
 import { request } from "./request";
+import { GetMeetingsParams, GetMeetingsResponse } from "./services.mock";
 
 export interface GetOrganizationParams {
     miniAppId: string;
@@ -248,6 +252,45 @@ export const getInformationGuides = async (
             currentPageSize: data.pageSize,
         };
         return informationGuides;
+    } catch (err) {
+        throw err;
+    }
+};
+
+
+export const getMeetings = async (
+    params: GetMeetingsParams,
+): Promise<Meetings> => {
+    try {
+        const {
+            organizationId,
+            limit = TOTAL_MEETING_PER_PAGE,
+            page = 0,
+        } = params;
+        const data = await request<GetMeetingsResponse>(
+            "GET",
+            API.MEETING,
+            {
+                page,
+                pargeSize: limit,
+            },
+            {
+                customHeader: {
+                    "x-organization-id": organizationId,
+                },
+            },
+        );
+        const meetings: Meetings = {
+            meetings: data.data?.map(item => ({
+                id: item.id,
+                name: item.name,
+                time: item.time,
+            })),
+            page: data.current,
+            total: data.total,
+            currentPageSize: data.pageSize,
+        };
+        return meetings;
     } catch (err) {
         throw err;
     }
